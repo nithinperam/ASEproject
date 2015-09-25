@@ -1,0 +1,115 @@
+<html>
+<head>
+<body background="login2.jpg">
+<style> 
+body {
+    background: url("login2.jpg");
+    background-size: 1400px 800px;
+    background-repeat: no-repeat;
+    padding-top: 10px;
+}
+</style>
+<meta charset="utf-8">
+<title>Login Page</title>
+<style type="text/css">
+a { text-decoration: none; }
+h1, p {
+margin-bottom: 10px;
+font-size : 13px;
+}
+strong {
+font-weight: bold;
+}
+.uppercase { text-transform: uppercase; }
+#login {
+margin: 10px auto;
+width: 300px;
+}
+form fieldset input[type="text"], input[type="password"] {
+background-color: #e5e5e5;
+border: none;
+border-radius: 3px;
+-moz-border-radius: 3px;
+-webkit-border-radius: 13px;
+color: #5a5656;
+font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+font-size: 16px;
+height: 50px;
+outline: none;
+padding: 0px 10px;
+width: 300px;
+-webkit-appearance:none;
+}
+
+form fieldset b {
+color: #5a5656;
+font-size: 10px;
+}
+form fieldset a {
+background-color:#008dde;
+font-size: 16px;
+}
+form fieldset b:hover { text-decoration: underline; }
+form fieldset a:hover { text-decoration: underline; }
+ul
+{
+list-style-type:none;
+margin:auto;
+padding:0;
+overflow:hidden;
+}
+li
+{
+float:left;
+}
+a:link,a:visited
+{
+display:block;
+width:280px;
+font-weight:bold;
+color:#000000;
+background-color:#008dde;
+text-align:center;
+padding:15px;
+text-decoration:none;
+text-transform:uppercase;
+}
+a:hover,a:active
+{
+background-color:#008dde;
+}
+
+center
+{
+margin-left:auto;
+margin-right:auto;
+width:50%;
+}
+
+</style>
+</head>
+<body>
+<div id="login">
+<h2><strong><center>WELCOME</center></center> </h2>
+<h2><center>Please login</center></h2>
+<form action="javascript:void(0);" method="get">
+<fieldset>
+<p><input type="text" required value="Username or email" onBlur="if(this.value=='')this.value='Username or Email'" onFocus="if(this.value=='Username')this.value='' "></p>
+<p><input type="password" required value="Password" onBlur="if(this.value=='')this.value='Password'" onFocus="if(this.value=='Password')this.value='' "></p>
+<p><b href="#">Forgot Password?</b></p>
+<ul>
+<li><a href="./chat.html" target="center">login</a></li>
+</ul>
+<ul>
+<h4><font color="black"> To create new account</font></h4><li><a href="./signup.html" target="center">register</a><li>
+</ul>
+</fieldset>
+</form>
+<p class="remember_me">
+          <label>
+            <input type="checkbox" name="remember_me" id="remember_me">Remember me on this computer
+          </label>
+        </p>
+</div> <!-- end login -->
+</body>
+</html>
