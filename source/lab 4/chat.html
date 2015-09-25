@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="" data-ng-app="geolocation">
+<head>
+  <meta t="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Angular Demo</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js" type="application/javascript"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"></script> 
+    <style>
+    #map-canvas {
+    width: 550px;
+    height: 500px;
+}
+    </style>
+</head>
+<body onload="welcome()">
+ <center>
+  <h2><b>Welcome <label id="user"></label></b></h2><hr>
+
+<body>
+<div class="geo" ng-controller="googlemapoutput">
+            <p> Geolocation Service: Displays your current location </p><br/> <br/>
+            <div id="map-canvas"></div>
+<h3>Project Hours a Day</h3>
+	<div class="chart">
+         <img src="https://chart.googleapis.com/chart?chs=500x250&chd=t:6,4,5&cht=p3&chl=Nithin%7CKoushik%7CPradhu">
+	
+        </div>
+    </body>
+</html>
+
+<script>
+angular.module('geolocation', [])
+.controller('googlemapoutput', function ($scope) {
+
+    var map;
+    var mapOptions;
+
+    $scope.initialize = function () {
+        navigator.geolocation.getCurrentPosition(function (position) {
+
+            var pos = new google.maps.LatLng(
+            position.coords.latitude,
+            position.coords.longitude);
+
+            var mapOptions = {
+                zoom: 16,
+                center: pos
+            };
+
+            map = new google.maps.Map(document.getElementById('map-canvas'),
+            mapOptions);
+
+            var marker = new google.maps.Marker({
+                position: pos,
+                map: map
+            });
+        });
+    };
+
+    google.maps.event.addDomListener(window, 'load', $scope.initialize);
+
+});
+</script>
+<title>Mashup</title>
+<script>
+            function welcome() {
+                var text = "";
+                text = localStorage.getItem("name");
+                document.getElementById('user').innerHTML = text;
+            }
+        </script>
+
+ <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script>
+
+$scope.myDataSource = {
+    chart: {
+        caption: "Age profile of website visitors",
+        subcaption: "Last Year",
+        startingangle: "120",
+        showlabels: "0",
+        showlegend: "1",
+        enablemultislicing: "0",
+        slicingdistance: "15",
+        showpercentvalues: "1",
+        showpercentintooltip: "0",
+        plottooltext: "Age group : $label Total visit : $datavalue",
+        theme: "fint"
+    },
+    data: [
+        {
+            label: "Nithin",
+            value: "1250400"
+        },
+{
+            label: "Koushik",
+            value: "1463300"
+        },
+        {
+            label: "Pradhu",
+            value: "1050700"
+        },
+        
+    ]
+}
+</script>

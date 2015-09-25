@@ -1,0 +1,85 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js" type="application/javascript"></script>
+</head>
+
+<head>
+<body background="login1.jpg">
+<style> 
+body {
+    background: url("login1.jpg");
+    background-size: 1400px 800px;
+    background-repeat: no-repeat;
+    padding-top: 10px;
+}
+</style>
+<meta charset="utf-8">
+<title>Login Page</title>
+<style type="text/css">
+a { text-decoration: none; }
+h1, p {
+margin-bottom: 10px;
+font-size : 13px;
+}
+
+
+form fieldset input[type="submit"] {
+background-color: #008dde;
+border: none;
+border-radius: 3px;
+-moz-border-radius: 3px;
+-webkit-border-radius: 3px;
+color: #f4f4f4;
+cursor: pointer;
+font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+font-size: 16px;
+height: 50px;
+text-transform: uppercase;
+width: 300px;
+-webkit-appearance:none;
+}
+
+
+</style>
+</head>
+
+<body >
+<center>
+<br>
+<h1>WELCOME PLEASE LOGIN</h1>
+</center>
+
+<center>
+<fieldset>
+<pre>
+<b>
+
+<div ng-app="register" ng-controller="LoginController">
+<form name="rform" action="./chat.html" method="post">
+ Username    : <input type="text" ng-model="user.name"><br><br>
+ Password    : <input type="password" ng-model="user.pwd"><br><br>
+ <input type="submit" ng-click="register(user.name,user.pwd)" value="Login">
+</form>
+<div>
+
+</b>
+</pre>
+</fieldset>
+</center>
+</div> <!-- end login -->
+
+</body>
+</html>
+<script>
+angular.module('register', [])
+.controller('LoginController', function ($scope) {
+    
+    //$scope.registers = [];
+    $scope.register = function (user,pwd) {
+        localStorage.setItem("name" , user);
+		localStorage.setItem("pass" , pwd);
+		
+        //$scope.registers.push( localStorage.getItem("name") + " registered.");
+    };
+});
+</script>
