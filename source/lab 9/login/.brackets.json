@@ -1,0 +1,7 @@
+{
+    "jscodehints.detectedExclusions": [
+        "C:/Users/koushik/Documents/login/karma.conf.js",
+        "C:/Users/koushik/Documents/copy/login/www/lib/ionic/js/ionic.min.js",
+        "C:/Users/koushik/Documents/copy/login/www/tests/logintest.js"
+    ]
+}
